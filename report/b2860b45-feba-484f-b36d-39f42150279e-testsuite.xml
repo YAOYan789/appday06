@@ -1,0 +1,103 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1562665599164" stop="1562665599743">
+  <name>test_01</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1562665599164" status="passed" stop="1562665599178">
+      <name>Test01.test001</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="9296-MainThread"/>
+        <label name="host" value="win-PC"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1562665599176" status="passed" stop="1562665599177">
+          <name>测试登录操作</name>
+          <title>测试登录操作</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1562665599184" status="passed" stop="1562665599188">
+      <name>Test01.test002</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="9296-MainThread"/>
+        <label name="host" value="win-PC"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1562665599187" status="passed" stop="1562665599187">
+          <name>测试退出</name>
+          <title>测试退出</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1562665599191" status="passed" stop="1562665599197">
+      <name>Test01.test003</name>
+      <attachments>
+        <attachment source="e88c7d89-0174-4d1c-9ac9-43293f67c7a5-attachment.txt" title="描述：" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="blocker"/>
+        <label name="thread" value="9296-MainThread"/>
+        <label name="host" value="win-PC"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1562665599206" status="failed" stop="1562665599743">
+      <name>Test01.test004</name>
+      <failure>
+        <message>AttributeError: png</message>
+        <stack-trace>self = &lt;test_01.Test01 object at 0x0346F250&gt;
+
+    def test004(self):
+        with open("./image/fail.png","rb")as f:
+            #参数：（描述：文件流，图片类型）
+&gt;           allure.attach("失败原因：",f.read(),allure.attach_type.png)
+
+scripts\test_01.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+cls = &lt;enum 'AttachmentType'&gt;, name = 'png'
+
+    def __getattr__(cls, name):
+        """Return the enum member matching `name`
+    
+            We use __getattr__ instead of descriptors or inserting into the enum
+            class' __dict__ in order to support `name` and `value` being both
+            properties for enum members (which live in the class' __dict__) and
+            enum members themselves.
+    
+            """
+        if _is_dunder(name):
+            raise AttributeError(name)
+        try:
+            return cls._member_map_[name]
+        except KeyError:
+&gt;           raise AttributeError(name) from None
+E           AttributeError: png
+
+c:\users\win\appdata\local\programs\python\python36-32\lib\enum.py:324: AttributeError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="9296-MainThread"/>
+        <label name="host" value="win-PC"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
